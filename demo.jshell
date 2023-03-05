@@ -1,0 +1,3 @@
+Duke.status()
+Duke.run("jar", "--version")
+Duke.version()

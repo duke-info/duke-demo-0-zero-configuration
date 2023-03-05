@@ -20,8 +20,4 @@ jobs:
           distribution: 'oracle'
           java-version: '17'
       - name: 'Set up Duke.java'
-        run: echo -e "/open https://src.duke.run/Duke.java\n/save Duke.java\nDuke.status()" | jshell -
-      - name: 'Show version of tool: jar'
-        run: java Duke.java jar --version
-      - name: 'Show Duke Status'
-        run: java Duke.java /status
+        run: jshell autoexec.jshell
