@@ -1,3 +1,34 @@
+/open PRINTING
+
+print("""
+|
+| Duke Demo 0 - Zero Configuration
+|
+""")
+
+println("| Load Duke.java into this JShell session")
+/open https://src.duke.run/Duke.java
+
+println("| Show current working directory status information")
 Duke.status()
+
+println("| Run three tools sequentially by running one tool at a time")
 Duke.run("jar", "--version")
-Duke.version()
+Duke.run("javac", "--version")
+Duke.run("javadoc", "--version")
+
+
+println("| Run three tools sequentially by running them in a single execution context")
+Duke.run("jar", "--version", "+", "javac", "--version", "+", "javadoc", "--version")
+
+print("""
+|
+| Possible next steps:
+|   Which tools are supported? ->
+|   Where do I find their names? ->
+|   How do I create my own tools? ->
+|   How do I include external tools? ->
+|
+""")
+
+/exit
